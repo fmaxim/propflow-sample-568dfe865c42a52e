@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>PropFlow SAMPLE · n8n work-order follow-up demo</title>
+<style>
+  :root { --bg:#0b1016; --card:#151c26; --line:#2a3644; --txt:#e7ecf3; --mut:#9aa7b8; --acc:#5b9cff; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: ui-sans-serif, system-ui, sans-serif; background:var(--bg); color:var(--txt); }
+  .wm { position:fixed; inset:0; pointer-events:none; display:flex; align-items:center; justify-content:center;
+    font-size:clamp(36px,8vw,72px); font-weight:800; letter-spacing:.1em; color:rgba(255,80,80,.10); transform:rotate(-18deg); z-index:0; }
+  .wrap { position:relative; z-index:1; max-width:980px; margin:0 auto; padding:28px 20px 64px; }
+  .badge { display:inline-block; background:rgba(180,40,40,.92); color:#fff; font-weight:800; letter-spacing:.06em;
+    padding:8px 14px; border-radius:8px; font-size:13px; margin-bottom:16px; }
+  h1 { font-size:clamp(26px,4vw,38px); margin:0 0 8px; }
+  .sub { color:var(--mut); margin:0 0 24px; line-height:1.5; }
+  .bullets { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin:0 0 28px; }
+  .bullets li { margin:8px 0; color:#d5dde8; line-height:1.45; }
+  .bullets strong { color:#fff; }
+  .grid { display:grid; gap:16px; grid-template-columns:1fr; }
+  @media(min-width:760px){ .grid.shots { grid-template-columns:1fr 1fr; } }
+  figure { margin:0; background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  figure img, figure video { display:block; width:100%; height:auto; background:#000; }
+  figcaption { padding:10px 14px; color:var(--mut); font-size:13px; border-top:1px solid var(--line); }
+  .note { margin-top:28px; color:var(--mut); font-size:13px; border-top:1px solid var(--line); padding-top:16px; }
+</style>
+</head>
+<body>
+  <div class="wm">SAMPLE · PORTFOLIO DEMO</div>
+  <div class="wrap">
+    <div class="badge">SAMPLE · PORTFOLIO DEMO · NOT A CLIENT DELIVERABLE</div>
+    <h1>PropFlow · n8n Work-Order Follow-up</h1>
+    <p class="sub">Private SAMPLE demo — real n8n UI (mock AppFolio intake → follow-ups → Slack alert → dual-run dedupe). Obscure link; watermarked portfolio only.</p>
+
+    <ul class="bullets">
+      <li><strong>REAL:</strong> n8n 1.82 workflow execution, local mock/capture server, CSV dedupe dual-run.</li>
+      <li><strong>MOCKED:</strong> AppFolio / WhatsApp / Gmail / Slack external APIs (shaped local payloads only).</li>
+      <li><strong>Run 1:</strong> actionable WOs fire WhatsApp + Gmail follow-ups; critical/SLA → Slack-shaped alert.</li>
+      <li><strong>Run 2:</strong> same work_order_ids skipped — no duplicate spam.</li>
+    </ul>
+
+    <h2 style="font-size:18px;margin:0 0 12px;color:#cfd8e3">Screen record (~76s)</h2>
+    <figure style="margin-bottom:22px">
+      <video controls playsinline preload="metadata" poster="assets/04-n8n-execute-success.png">
+        <source src="assets/propflow-n8n-demo-SAMPLE.mp4" type="video/mp4" />
+      </video>
+      <figcaption>Demo → n8n canvas → Test (follow-up green) → proof captures → dedupe skip. SAMPLE watermark throughout.</figcaption>
+    </figure>
+
+    <h2 style="font-size:18px;margin:0 0 12px;color:#cfd8e3">Still frames</h2>
+    <div class="grid shots">
+      <figure>
+        <img src="assets/01-demo-home.png" alt="PropFlow SAMPLE demo home" />
+        <figcaption>Demo storyboard home</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/03-n8n-canvas.png" alt="n8n PropFlow canvas SAMPLE" />
+        <figcaption>n8n canvas — PropFlow workflow</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/04-n8n-execute-success.png" alt="n8n follow-up success SAMPLE" />
+        <figcaption>Run 1 — follow-up branch green</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/04b-n8n-execute-dedupe-skip.png" alt="n8n dedupe skip SAMPLE" />
+        <figcaption>Run 2 — dedupe skip path</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/05-proof-captures.png" alt="PropFlow capture proof SAMPLE" />
+        <figcaption>Local proof — WA / Gmail / Slack captures</figcaption>
+      </figure>
+    </div>
+
+    <p class="note">Biz cite: “PropFlow SAMPLE — private demo page (n8n work-order follow-up dual-run). Watermarked portfolio only; no client contact / no Submit.”</p>
+  </div>
+</body>
+</html>
